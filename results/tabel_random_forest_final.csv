@@ -1,0 +1,10 @@
+"Indicator","Valoare"
+"Observatii totale",82
+"Train",58
+"Test",24
+"Numar arbori",500
+"Varianta explicata OOB (%)",91.85
+"RMSE",3.35270188248158
+"MAE",2.61559897222222
+"R2 predictiv",0.917001266770472
+"cor(observat, prezis)^2",0.934181604275485

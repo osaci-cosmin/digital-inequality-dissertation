@@ -1,6 +1,6 @@
 # Digital Inequality: Panel Data and Random Forest Analysis
 
-This repository contains the reconstruction, validation, and replication of my Master's dissertation analysis on digital inequality, internet use, and social media participation across European countries.
+This repository contains the reconstruction and validation of the empirical analysis developed for my Master's dissertation on digital inequality, internet use, and social media participation across European countries.
 
 The project combines panel-data econometrics using Fixed Effects (FE) models with Random Forest (RF) predictive modeling.
 
@@ -26,7 +26,7 @@ The dataset was reconstructed from official sources:
   - Tertiary education
 
 - **OECD Income Distribution Database (IDD)**
-  - Mean household disposable income
+  - Mean equivalised household disposable income (PPP-adjusted)
   - Gini coefficient
 
 The original research period was 2017–2022. Due to the availability of the digital-skills indicator, the final complete analytical sample contains observations for 2017, 2019, and 2021.
@@ -78,11 +78,11 @@ Random Forest is interpreted as a predictive and exploratory model rather than a
 
 ## Main Fixed Effects Results
 
-For **daily internet use**, the reconstructed model shows particularly strong associations with:
+For **daily internet use**, the reconstructed model shows statistically significant associations with:
 
 - household income: positive;
 - digital skills: positive;
-- never having used the internet: strongly negative.
+- never having used the internet: negative.
 
 The model achieves a within R² of approximately **0.947**.
 
@@ -101,9 +101,9 @@ Performance on the test sample:
 | RMSE | 3.35 |
 | MAE | 2.62 |
 | Predictive R² | 0.917 |
-| Correlation² | 0.934 |
+| Squared correlation (r²) | 0.934 |
 
-The Random Forest model therefore shows strong predictive performance on the held-out test data.
+The Random Forest model shows strong predictive performance on the held-out test sample (n = 24).
 
 ## Variable Importance
 
@@ -157,9 +157,10 @@ digital-inequality-dissertation/
 ├── LICENSE
 └── README.md
 ```
+
 ## Reproducibility
 
-The analysis can be reproduced from the repository root using the scripts available in the `scripts/` folder.
+The analysis workflow can be rerun from the repository root using the scripts available in the `scripts/` folder.
 
 The workflow is organized as follows:
 
@@ -178,6 +179,8 @@ The workflow is organized as follows:
    - generates the variable importance, partial dependence, and observed-vs-predicted outputs.
 
 All file paths used in the scripts are relative to the repository root.
+
+The final analytical datasets used for the reported results are included in the repository to preserve the analyzed data snapshot.
 
 ## Use of AI Tools
 
